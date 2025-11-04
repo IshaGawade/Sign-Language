@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Language Translator</title>
+<style>
+  body { font-family: Arial; margin:0; height:100vh; display:flex;}
+  #left-panel { width:35%; border-right:1px solid #ccc; padding:20px; display:flex; flex-direction:column;}
+  input[type="text"] { padding:10px; font-size:16px; width:100%;}
+  #suggestions { margin-top:10px; flex:1; overflow-y:auto; border:1px solid #ccc; padding:5px;}
+  #suggestions div { padding:5px; cursor:pointer; }
+  #suggestions div:hover { background-color:#f0f0f0; }
+  #right-panel { width:65%; padding:20px; display:flex; flex-wrap:wrap; overflow-y:auto; align-content:flex-start; background-color:#fafafa;}
+  .letter-img { 
+    margin:5px; 
+    width:20%;    /* 5 images per row approximately */
+    height:auto;  
+    object-fit:contain; 
+    border:1px solid #ddd; 
+    border-radius:5px; 
+}
+
+</style>
+</head>
+<body>
+
+<div id="left-panel">
+  <input type="text" id="input-word" placeholder="Type a word or sentence...">
+  <div id="suggestions"></div>
+</div>
+
+<div id="right-panel"></div>
+
+<script>
+  const inputField = document.getElementById('input-word');
+  const suggestionsDiv = document.getElementById('suggestions');
+  const rightPanel = document.getElementById('right-panel');
+
+  inputField.addEventListener('input', async () => {
+    const value = inputField.value;
+    updateSuggestions(value);
+    updateImages(value.toUpperCase());
+  });
+
+ async function updateSuggestions(text) {
+    suggestionsDiv.innerHTML = '';
+    if (!text) return;
+    try {
+        const res = await fetch(`http://localhost:4567/suggestions?prefix=${encodeURIComponent(text)}`);
+        const suggestions = await res.json();
+        suggestions.forEach(s => {
+            const div = document.createElement('div');
+            div.textContent = s;
+            div.addEventListener('click', () => {
+                inputField.value = s;
+                updateImages(s.toUpperCase());
+                suggestionsDiv.innerHTML = '';
+            });
+            suggestionsDiv.appendChild(div);
+        });
+    } catch(err) { console.error(err); }
+}
+
+async function updateImages(text) {
+    rightPanel.innerHTML = '';
+    try {
+        const res = await fetch(`http://localhost:4567/images?text=${encodeURIComponent(text)}`);
+        const paths = await res.json();
+        paths.forEach(p => {
+            const img = document.createElement('img');
+            img.src = p;
+            img.className = 'letter-img';
+            rightPanel.appendChild(img);
+        });
+    } catch(err) { console.error(err); }
+}
+
+</script>
+
+</body>
+</html>
