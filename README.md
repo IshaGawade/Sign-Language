@@ -37,7 +37,7 @@ Sign Language Translator/
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/Dkhatke/Sign-Language.git
+   git clone https://github.com/IshaGawade/Sign-Language.git
    cd "Sign Language Translator"
 2. **Compile the Program**
 javac src\SignLanguageTranslator.java
