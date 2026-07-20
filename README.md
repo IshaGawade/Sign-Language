@@ -2,7 +2,7 @@
 
 The **Sign Language Translator** is a simple yet interactive Java-based application that helps users understand the **American Sign Language (ASL)** alphabet.
 
-When a user enters a word, the program displays corresponding images for each alphabet letter — helping bridge communication between hearing and speech-impaired individuals.
+When a user enters a word, the program displays corresponding images for each alphabet letter - helping bridge communication between hearing and speech-impaired individuals.
 
 ---
 
