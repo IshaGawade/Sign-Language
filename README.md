@@ -1,16 +1,17 @@
 # 🖐️ Sign Language Translator
 
-The **Sign Language Translator** is a simple yet interactive Java-based application that helps users understand the **American Sign Language (ASL)** alphabet.  
+The **Sign Language Translator** is a simple yet interactive Java-based application that helps users understand the **American Sign Language (ASL)** alphabet.
+
 When a user enters a word, the program displays corresponding images for each alphabet letter — helping bridge communication between hearing and speech-impaired individuals.
 
 ---
 
 ## Features
 
-- **Alphabet-to-Sign Translation** – Converts typed English alphabets into their corresponding sign language images.
-- **Sorted Dictionary View** – Displays all alphabets (A–Z) with their sign images in sorted order.
-- **TreeMap Integration** – Stores and retrieves alphabet-sign mappings in ascending order automatically.
-- **Owner-only Feature** – Only developers can add or modify signs (not general users).
+- **Alphabet-to-Sign Translation** — Converts typed English alphabets into their corresponding sign language images.
+- **Sorted Dictionary View** — Displays all alphabets (A–Z) with their sign images in sorted order.
+- **TreeMap Integration** — Stores and retrieves alphabet-sign mappings in ascending order automatically.
+- **Owner-only Feature** — Only developers can add or modify signs (not general users).
 - Supports both `.jpeg` and `.jpg` image formats.
 
 ---
@@ -29,27 +30,31 @@ Sign Language Translator/
 └── README.md
 ```
 
-
 ---
 
 ## ⚙️ How to Run the Project
 
 1. **Clone the Repository**
-   ```bash
+```bash
    git clone https://github.com/IshaGawade/Sign-Language.git
    cd "Sign Language Translator"
+```
+
 2. **Compile the Program**
-javac src\SignLanguageTranslator.java
+```bash
+   javac src\SignLanguageTranslator.java
+```
 
 3. **Run the Program**
-java -cp src SignLanguageTranslator
+```bash
+   java -cp src SignLanguageTranslator
+```
 
-💡 Future Enhancements
+---
 
-Add real-time hand gesture recognition using a webcam and OpenCV.
+## Future Enhancements
 
-Integrate text-to-speech to pronounce words.
-
-Support for numbers and gestures beyond alphabets.
-
-Build a web or mobile version using React or Android Studio.
+- Add real-time hand gesture recognition using a webcam and OpenCV.
+- Integrate text-to-speech to pronounce words.
+- Support for numbers and gestures beyond alphabets.
+- Build a web or mobile version using React or Android Studio.
