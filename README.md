@@ -7,11 +7,11 @@ When a user enters a word, the program displays corresponding images for each al
 
 ## Features
 
-- 🔠 **Alphabet-to-Sign Translation** – Converts typed English alphabets into their corresponding sign language images.
-- 🗂️ **Sorted Dictionary View** – Displays all alphabets (A–Z) with their sign images in sorted order.
-- 🧩 **TreeMap Integration** – Stores and retrieves alphabet-sign mappings in ascending order automatically.
-- 🔒 **Owner-only Feature** – Only developers can add or modify signs (not general users).
-- 🖼️ Supports both `.jpeg` and `.jpg` image formats.
+- **Alphabet-to-Sign Translation** – Converts typed English alphabets into their corresponding sign language images.
+- **Sorted Dictionary View** – Displays all alphabets (A–Z) with their sign images in sorted order.
+- **TreeMap Integration** – Stores and retrieves alphabet-sign mappings in ascending order automatically.
+- **Owner-only Feature** – Only developers can add or modify signs (not general users).
+- Supports both `.jpeg` and `.jpg` image formats.
 
 ---
 
