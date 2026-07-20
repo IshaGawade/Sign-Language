@@ -5,7 +5,7 @@ When a user enters a word, the program displays corresponding images for each al
 
 ---
 
-## 🚀 Features
+## Features
 
 - 🔠 **Alphabet-to-Sign Translation** – Converts typed English alphabets into their corresponding sign language images.
 - 🗂️ **Sorted Dictionary View** – Displays all alphabets (A–Z) with their sign images in sorted order.
@@ -15,20 +15,19 @@ When a user enters a word, the program displays corresponding images for each al
 
 ---
 
-## 🧠 Project Structure
+## Project Structure
 
+```
 Sign Language Translator/
-│
 ├── src/
-│ └── SignLanguageTranslator.java # Main Java source file
-│
-├── images/ # Folder containing sign images (A–Z)
-│ ├── A.jpeg
-│ ├── B.jpeg
-│ ├── C.jpeg
-│ └── ... Z.jpeg
-│
-└── README.md # Project documentation
+│   └── SignLanguageTranslator.java   # Main Java source file
+├── images/
+│   ├── A.jpeg
+│   ├── B.jpeg
+│   ├── C.jpeg
+│   └── ... Z.jpeg
+└── README.md
+```
 
 
 ---
